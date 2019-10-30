@@ -1,5 +1,5 @@
 'use strict';
-
+process.env.SKIP_OAUTH_SERVER = true;
 process.env.STORAGE = 'mongo';
 
 const jwt = require('jsonwebtoken');

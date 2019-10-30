@@ -1,4 +1,5 @@
 'use strict';
+process.env.SKIP_OAUTH_SERVER = true;
 
 const supergoose = require('../../supergoose.js');
 const auth = require('../../../src/auth/middleware.js');
