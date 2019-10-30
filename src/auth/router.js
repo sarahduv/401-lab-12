@@ -18,7 +18,7 @@ authRouter.post('/signup', (req, res, next) => {
       res.send(req.token);
     }).catch(next);
 });
-
+// eslint-disable-next-line no-unused-vars
 authRouter.post('/signin', auth, (req, res, next) => {
   res.cookie('auth', req.token);
   res.send(req.token);

@@ -40,6 +40,7 @@ users.statics.createFromOauth = function(email) {
       console.log('Welcome Back', user.username);
       return user;
     })
+    // eslint-disable-next-line no-unused-vars
     .catch( error => {
       console.log('Creating new user');
       let username = email;
@@ -54,7 +55,7 @@ users.methods.generateToken = function() {
     id: this._id,
     role: this.role,
   };
-  return jwt.sign(token, process.env.SECRET);
+  return jwt.sign(token, process.env.SECRET || 'changeit');
 };
 
 module.exports = mongoose.model('users', users);
