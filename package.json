@@ -6,8 +6,6 @@
   "scripts": {
     "start": "node index.js",
     "watch": "nodemon index.js",
-    "test-watch": "jest --watchAll",
-    "test": "jest",
     "lint": "eslint '**/*.js' --fix"
   },
   "jest": {

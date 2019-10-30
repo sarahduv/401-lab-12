@@ -1,8 +1,8 @@
 # OAuth Comparative Analysis
 
-## OAuth Provider Name 
+## OAuth Provider Name: GitHub
 
-### Research Conducted By: Student Names
+### Research Conducted By: Peter Carmichael, Alistair Blake, Sarah Gilliam
 
 ### Overall Score and Comments
 #### Score (Out of 10): 7
@@ -16,12 +16,10 @@ This stack uses the following:
 * Mongo
 
 #### Pros
-* Item 1
-* Item 2
+* oAuth provides better security
 
 #### Cons
-* Item 1
-* Item 2
+* Documentation
 
 ### Ratings and Reviews
 #### Documentation
@@ -48,10 +46,10 @@ node js
 
 #### Ramp-Up Projections
 How long would/should it take a team of mid-junior developers to become productive?
+- 1 week, depending on their strengths and weaknesses
 
 #### Community Support and Adoption levels
-How popular is this framework? What big companies are running on it? How is it "seen" in the general JS community?  Is there an active community of developers supporting and growing it?
-
+All the frameworks in this repo are widely used and very popular, with over thousands of active repo's.
 
 ### Links and Resources
 * [superagent](https://www.npmjs.com/package/superagent)
