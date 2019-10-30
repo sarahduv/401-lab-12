@@ -40,6 +40,7 @@ users.statics.createFromOauth = function(email) {
       console.log('Welcome Back', user.username);
       return user;
     })
+    // eslint-disable-next-line no-unused-vars
     .catch( error => {
       console.log('Creating new user');
       let username = email;
