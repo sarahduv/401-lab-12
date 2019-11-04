@@ -10,16 +10,17 @@ function authorize(req, res) {
 
   let code = req.query.code;
   console.log('1) code received: ', code);
-
-  return superagent.post('https://github.com/login/oauth/access_token')
-    .type('form')
-    .send({
+  const sendObj = {
       code: code,
       client_id: GITHUB_CLIENT_ID,
       client_secret: GITHUB_CLIENT_SECRET,
       redirect_uri: GITHUB_REDIRECT_URI,
       grant_type: 'authorization_code',
-    })
+    };
+  console.log("leg 2a body: ", sendObj);
+  return superagent.post('https://github.com/login/oauth/access_token')
+    .type('form')
+    .send(sendObj)
     .then(response => {
       let access_token = response.body.access_token;
       console.log('before part 2 log of QUERY', response.query);
