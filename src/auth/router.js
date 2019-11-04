@@ -24,12 +24,6 @@ authRouter.post('/signin', auth, (req, res, next) => {
   res.send(req.token);
 });
 
-authRouter.get('/oauth', (req,res,next) => {
-  oauth(req)
-    .then( token => {
-      res.status(200).send(token);
-    })
-    .catch(next);
-});
+authRouter.get('/oauth', oauth);
 
 module.exports = authRouter;
