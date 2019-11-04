@@ -9,7 +9,6 @@ var GITHUB_REDIRECT_URI = process.env.GITHUB_REDIRECT_URI; //http://localhost:30
 function authorize(req, res) {
 
   let code = req.query.code;
-  console.log(req.query.code);
   console.log('1) code received: ', code);
 
   return superagent.post('https://github.com/login/oauth/access_token')
@@ -23,6 +22,8 @@ function authorize(req, res) {
     })
     .then(response => {
       let access_token = response.body.access_token;
+      console.log('before part 2 log of QUERY', response.query);
+      console.log('before part 2 log of BODY', response.body);
       console.log('(2) Access token received, ', access_token);
       return access_token;
     })
